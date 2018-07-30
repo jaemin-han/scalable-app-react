@@ -16,12 +16,11 @@ function* fetchTopics() {
   } catch (e) {
     yield put(requestTopicsFailed(e.message));
   }
-
 }
 
 // Individual exports for testing
 export function* fetchTopicsSaga() {
-  yield* takeLatest(REQUEST_TOPICS, fetchTopics) ;
+  yield* takeLatest(REQUEST_TOPICS, fetchTopics);
 }
 
 // All sagas to be loaded
