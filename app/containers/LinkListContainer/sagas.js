@@ -3,7 +3,6 @@ import { call, put } from 'redux-saga/effects';
 import { takeLatest } from 'redux-saga';
 import { SELECT_TOPIC } from '../NavigationContainer/constants';
 import { requestLinksSucceeded, requestLinksFailed } from './actions';
-import { request } from 'https';
 
 function fetchLinksFromServer(topic) {
   return fetch(`http://localhost:3000/api/topics/${topic.name}/links`)
