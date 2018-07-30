@@ -37,7 +37,6 @@ export default function createRoutes(store) {
           navigationSagas,
           linkListReducer,
           linkListSagas,
-        
         ]) => {
           injectReducer('navigationContainer', navigationReducer.default);
           injectSagas('navigationContainer', navigationSagas.default);
