@@ -23,10 +23,16 @@ function setupDb() {
     description: 'links to programming related news articles',
   };
 
+  const topic4 = {
+    name: 'technology',
+    description: 'latest technology news',
+  };
+
 
   db.get('topics').push(topic1).value();
   db.get('topics').push(topic2).value();
   db.get('topics').push(topic3).value();
+  db.get('topics').push(topic4).value();
 
   db.get('links').push({
     description: 'The very library we are working with now',
@@ -57,6 +63,14 @@ function setupDb() {
     description: 'Go find some news yourself!',
     url: 'https://google.com',
     topicName: topic3.name,
+    id: uuid(),
+    voteCount: 0,
+    voters: [],
+  }).value();
+  db.get('links').push({
+    description: 'Latest Technology News!',
+    url: 'https://google.com',
+    topicName: topic4.name,
     id: uuid(),
     voteCount: 0,
     voters: [],

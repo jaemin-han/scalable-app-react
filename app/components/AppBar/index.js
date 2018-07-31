@@ -28,7 +28,7 @@ function AppBar({ toggleDrawer }) {
 }
 
 AppBar.propTypes = {
-  toggleDrawer: React.PropTypes.func.isRequired
-}
+  toggleDrawer: React.PropTypes.func.isRequired,
+};
 
 export default AppBar;

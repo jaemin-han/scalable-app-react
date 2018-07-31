@@ -7,22 +7,30 @@
 import React from 'react';
 import styles from './styles.css';
 import AppBar from '../AppBar';
+import Drawer from '../Drawer';
 
-function Navigation({ topics, selectTopic, toggleDrawer }) {
-  const topicNodes = topics.map(t => (
-    <div
-      key={t.name}
-      onClick={() => selectTopic(t)}
-    >
-      {t.name}
-    </div>
-  ));
+function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen }) {
+  // const topicNodes = topics.map(t => (
+  //   <div
+  //     key={t.name}
+  //     onClick={() => selectTopic(t)}
+  //   >
+  //     {t.name}
+  //   </div>
+  // ));
   return (
     <div className={styles.navigation}>
-      <AppBar 
+      <AppBar
         toggleDrawer={toggleDrawer}
       />
-        {topicNodes}
+      <Drawer
+          items={topics}
+          selectItem={selectTopic}
+          itemLabelAttr="name"
+          itemKeyAttr="name"
+          isDrawerOpen={isDrawerOpen}
+      />
+        {/* {topicNodes} */}
     </div>
   );
 }
@@ -36,5 +44,6 @@ Navigation.propTypes = {
   ).isRequired,
   selectTopic: React.PropTypes.func.isRequired,
   toggleDrawer: React.PropTypes.func.isRequired,
+  isDrawerOpen: React.PropTypes.bool.isRequired,
 };
 export default Navigation;
