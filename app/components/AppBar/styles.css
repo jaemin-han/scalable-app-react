@@ -13,15 +13,21 @@
     margin-right: 15px;
 }
 
-icon {
+.icon {
     font-size: 20px;
     color: #fff;
 }
 
-icon:hover {
+.icon:hover {
     color: #e5e5e5;
 }
 
 .linkContainer {
     font-size: 16px;
+}
+
+.heading {
+    text-align: left;
+    display: flex;
+    flex-grow: 2;
 }
