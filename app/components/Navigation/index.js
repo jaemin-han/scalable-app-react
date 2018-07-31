@@ -24,11 +24,11 @@ function Navigation({ topics, selectTopic, toggleDrawer, isDrawerOpen }) {
         toggleDrawer={toggleDrawer}
       />
       <Drawer
-          items={topics}
-          selectItem={selectTopic}
-          itemLabelAttr="name"
-          itemKeyAttr="name"
-          isDrawerOpen={isDrawerOpen}
+        items={topics}
+        selectItem={selectTopic}
+        itemLabelAttr="name"
+        itemKeyAttr="name"
+        isDrawerOpen={isDrawerOpen}
       />
         {/* {topicNodes} */}
     </div>
