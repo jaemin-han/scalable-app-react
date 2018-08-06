@@ -17,7 +17,7 @@ function LinkList({ links, routeTopicName }) {
   ));
   return (
     <div className={styles.linkList}>
-      {routeTopicName}
+      <h1>{routeTopicName}</h1>
       {linkNodes}
     </div>
   );
